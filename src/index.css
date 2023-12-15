@@ -69,3 +69,19 @@ input[type="submit"]:hover {
   height: 50px;
   margin-bottom: 5px;
 }
+.packingList > ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.packingList > ul > li {
+  margin: 5px;
+  padding: 5px;
+  background-color: cadetblue;
+  /* border: 1px solid black; */
+}
+li > input,
+button,
+span {
+  margin: 3px;
+}
