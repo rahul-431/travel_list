@@ -20,6 +20,9 @@ function App() {
       )
     );
   }
+  function handleClearList() {
+    setItem([]);
+  }
   return (
     <div className="main">
       <Header />
@@ -29,6 +32,7 @@ function App() {
         item={item}
         onDeleteItem={handleDeleteItem}
         onToggleItem={handleToggleItem}
+        onClearList={handleClearList}
       />
     </div>
   );

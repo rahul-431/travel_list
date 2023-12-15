@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import Items from "./Items";
 
-export default function PackingList({ item, onDeleteItem, onToggleItem }) {
+export default function PackingList({
+  item,
+  onDeleteItem,
+  onToggleItem,
+  onClearList,
+}) {
+  function onClear(e) {
+    onClearList();
+  }
   const [sortBy, setSortBy] = useState("input");
   let sortedItems;
   if (sortBy === "input") sortedItems = item;
@@ -33,6 +41,7 @@ export default function PackingList({ item, onDeleteItem, onToggleItem }) {
           <option value="desc">Sort by Description</option>
           <option value="packed">Sort by packed status</option>
         </select>
+        <button onClick={(e) => onClear(e)}>Clear List</button>
       </div>
     </div>
   );
