@@ -21,7 +21,10 @@ function App() {
     );
   }
   function handleClearList() {
-    setItem([]);
+    const confirmed = window.confirm(
+      "Are you sure that you want to clear the list?"
+    );
+    if (confirmed) setItem([]);
   }
   return (
     <div className="main">
